@@ -31,9 +31,12 @@ function query(filter = {}) {
     // if (byType !== 'all') {
     //     findFilters.push({ type: byType })
     // }
+    
+    console.log('eventservice')
     return mongoService.connectToDB()
         .then(dbConn => {
-            const eventCollection = dbConn.collection('event');
+            const eventCollection = dbConn.collection('events');
+            eventCollection.find({}).toArray().then(events => console.log(events))
             return eventCollection.find({}).toArray()
             // return eventCollection.find({ $and: findFilters }).sort(sortObj).toArray()
         })
@@ -43,7 +46,7 @@ function getById(eventId) {
     eventId = new ObjectId(eventId)
     return mongoService.connectToDB()
         .then(dbConn => {
-            const eventCollection = dbConn.collection('event');
+            const eventCollection = dbConn.collection('events');
             return eventCollection.findOne({ _id: eventId })
         })
 }
@@ -52,7 +55,7 @@ function remove(eventId) {
     eventId = new ObjectId(eventId)
     return mongoService.connectToDB()
         .then(dbConn => {
-            const eventCollection = dbConn.collection('event');
+            const eventCollection = dbConn.collection('events');
             return eventCollection.remove({ _id: eventId })
         })
 }
@@ -61,7 +64,7 @@ function update(event) {
     const eventId = new ObjectId(event._id)
     return mongoService.connectToDB()
         .then(dbConn => {
-            const eventCollection = dbConn.collection('event');
+            const eventCollection = dbConn.collection('events');
             return eventCollection.updateOne({ _id: eventId },
                 { $set: { name: event.name, price: event.price, type: event.type,} })
         })
@@ -70,7 +73,7 @@ function update(event) {
 function add(event) {
     return mongoService.connectToDB()
         .then(dbConn => {
-            const eventCollection = dbConn.collection('event');
+            const eventCollection = dbConn.collection('events');
             return eventCollection.insertOne(event)
         })
 }
