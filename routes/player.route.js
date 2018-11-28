@@ -27,11 +27,9 @@ function addRoutes(app) {
 
 
     app.put('/login', (req,res) => {
-        // console.log(4)
         const { userName, password } = req.body
         playerService.login(userName, password)
             .then(user => {
-                // console.log(user)
                 if (user.name) {
                     res.json(user)
                 }
@@ -40,7 +38,7 @@ function addRoutes(app) {
     })
 
     app.put('/player/:playerId', (req, res) => {
-        console.log(req.body)
+        console.log('server', req.body)
         const player = req.body
         console.log('server', player)
         playerService.update(player)
