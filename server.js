@@ -7,6 +7,7 @@ const session = require('express-session')
 const app = express();
 
 const eventRoute = require('./routes/event.route')
+const playerRoute = require('./routes/player.route')
 
 const cors = require('cors')
 
@@ -30,6 +31,7 @@ app.use(session({
 
 app.use(express.static('public'));
 eventRoute(app);
+playerRoute(app)
 
 // app.post('/login', (req, res) => {
 //     const username = req.body;
