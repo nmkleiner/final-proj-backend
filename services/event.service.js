@@ -53,7 +53,7 @@ function remove(eventId) {
     return mongoService.connectToDB()
         .then(dbConn => {
             const eventCollection = dbConn.collection('event');
-            return eventCollection.remove({ _id: toyId })
+            return eventCollection.remove({ _id: eventId })
         })
 }
 
@@ -70,7 +70,7 @@ function update(event) {
 function add(event) {
     return mongoService.connectToDB()
         .then(dbConn => {
-            const toyCollection = dbConn.collection('event');
-            return toyCollection.insertOne(event)
+            const eventCollection = dbConn.collection('event');
+            return eventCollection.insertOne(event)
         })
 }
