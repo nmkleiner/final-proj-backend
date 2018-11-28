@@ -17,7 +17,13 @@ function query(filter = {}) {
     // const byType = filter.type
     // const sortParams = filter.sortBy.split('_')
     // const sortObj = { [sortParams[0]]: +sortParams[1] }
-    // const findFilters = [{ name: { $regex: `.*${byName}.*` } }]
+    const findFilters = []
+    // if (filter) {
+    //     if (filter.byGenre) {
+    //         console.log('hi');
+            
+    //     }
+    // }
     // if (byStatus !== 'all') {
     //     if (byStatus === 'inStock') findFilters.push({ inStock: true })
     //     else findFilters.push({ inStock: false })

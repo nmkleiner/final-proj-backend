@@ -15,10 +15,7 @@ function addRoutes(app) {
     app.get('/event', (req, res) => {
         // const filter = req.query;
         eventService.query()
-            .then(events => {
-                console.log(res)
-                res.json(events)
-            });
+            .then(events => res.json(events));
     })
 
     // get one event
