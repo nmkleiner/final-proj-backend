@@ -5,7 +5,8 @@ const mongoService = require('./mongo.service')
 const ObjectId = require('mongodb').ObjectId;
 
 module.exports = {
-    login
+    login,
+    update
 }
 
 function login (userName, password) {
@@ -19,4 +20,15 @@ function login (userName, password) {
             if (password === user.password) return user
             else return {};
     })
+}
+
+
+function update(user) {
+    const userId = new ObjectId(user._id)
+    delete user._id;
+    return mongoService.connectToDB()
+        .then(dbConn => {
+            const playerCollection = dbConn.collection('players');
+            playerCollection.findOneAndUpdate({ _id: userId }, { $set: user })
+        })
 }

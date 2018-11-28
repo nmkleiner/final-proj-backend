@@ -36,7 +36,7 @@ function query(filter = {}) {
     return mongoService.connectToDB()
         .then(dbConn => {
             const eventCollection = dbConn.collection('events');
-            eventCollection.find({}).toArray().then(events => console.log(events))
+            // eventCollection.find({}).toArray().then(events => console.log(events))
             return eventCollection.find({}).toArray()
             // return eventCollection.find({ $and: findFilters }).sort(sortObj).toArray()
         })
