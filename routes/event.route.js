@@ -36,10 +36,11 @@ function addRoutes(app) {
     })
 
     // update event
-    app.put('/eventId/:eventIdId', (req, res) => {
+    app.put('/eventId/:eventId', (req, res) => {
         const event = req.body;
+        console.log(event)
         eventService.update(event)
-            .then(event => res.json(event));
+        .then(event => res.json(event));
     })
     
     // add event
