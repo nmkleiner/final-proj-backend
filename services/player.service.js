@@ -10,7 +10,7 @@ module.exports = {
     login,
     update,
     signUp,
-    getById
+    getById,
     remove,
     add
 }
