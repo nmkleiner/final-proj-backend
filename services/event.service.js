@@ -60,13 +60,23 @@ function remove(eventId) {
         })
 }
 
+// function update(event) {
+//     const eventId = new ObjectId(event._id)
+//     return mongoService.connectToDB()
+//         .then(dbConn => {
+//             const eventCollection = dbConn.collection('events');
+//             return eventCollection.updateOne({ _id: eventId },
+//                 { $set: { name: event.name, price: event.price, type: event.type,} })
+//         })
+// }
+
 function update(event) {
     const eventId = new ObjectId(event._id)
+    delete event._id;
     return mongoService.connectToDB()
         .then(dbConn => {
             const eventCollection = dbConn.collection('events');
-            return eventCollection.updateOne({ _id: eventId },
-                { $set: { name: event.name, price: event.price, type: event.type,} })
+            eventCollection.findOneAndUpdate({ _id: eventId }, { $set: event })
         })
 }
 

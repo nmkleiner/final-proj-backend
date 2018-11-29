@@ -36,8 +36,9 @@ function addRoutes(app) {
     })
 
     // update event
-    app.put('/eventId/:eventIdId', (req, res) => {
+    app.put('/event/:eventId', (req, res) => {
         const event = req.body;
+        console.log('event passed in put:', event)
         eventService.update(event)
             .then(event => res.json(event));
     })
