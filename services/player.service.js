@@ -9,6 +9,8 @@ module.exports = {
     getById,
     login,
     update,
+    signUp,
+    getById,
     remove,
     add
 }
@@ -43,6 +45,15 @@ function login (userName, password) {
     })
 }
 
+function getById(playerId) {
+    playerId = new ObjectId(playerId)
+    return mongoService.connectToDB()
+        .then(dbConn => {
+            const playerCollection = dbConn.collection('players');
+            playerCollection.findOne({ _id: playerId }).then(player => console.log(player,'player'))
+            return playerCollection.findOne({ _id: playerId })
+        })
+}
 
 function update(user) {
     const userId = new ObjectId(user._id)
@@ -52,7 +63,17 @@ function update(user) {
             const playerCollection = dbConn.collection('players');
             playerCollection.findOneAndUpdate({ _id: userId }, { $set: user })
         })
+    }
+    
+    
+function signUp(user) {
+    return mongoService.connectToDB()
+        .then(dbConn => {
+            const playerCollection = dbConn.collection('players');
+            playerCollection.insertOne(user)
+        })
 }
+
 
 function remove(userId) {
     userId = new ObjectId(userId)
