@@ -22,14 +22,15 @@ app.use(bodyParser.json());
 //   }));
 
 app.use(cookieParser());
+
 app.use(session({
     secret: 'puki muki',
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false }
-  }))
-
+}))
 app.use(express.static('public'));
+
 eventRoute(app);
 playerRoute(app)
 
