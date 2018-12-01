@@ -50,8 +50,6 @@ function getById(playerId) {
     return mongoService.connectToDB()
         .then(dbConn => {
             const playerCollection = dbConn.collection('players');
-            playerCollection.findOne({ _id: playerId })
-            .then(player => {})
             return playerCollection.findOne({ _id: playerId })
         })
 }

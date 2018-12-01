@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const eventService = require('../services/event.service')
-const session = require('express-session')
+const eventService = require("../services/event.service");
+const session = require("express-session");
 module.exports = addRoutes;
 
 // function requiredAuth(req, res, next) {
@@ -11,29 +11,34 @@ module.exports = addRoutes;
 // }
 
 function addRoutes(app) {
-    // get all events
-    app.get('/event', (req, res) => {
-        // const filter = req.query;
-        eventService.query()
-            .then(events => res.json(events));
-    })
+  // get all events
+  app.get("/event", (req, res) => {
+    // const filter = req.query;
+    eventService.query().then(events => res.json(events));
+  });
 
-    // get one event
-    app.get('/event/:eventId', (req, res) => {
-        const eventId = req.params.eventId;
-        eventService.getById(eventId)
-        .then(event => {
-            res.json(event)
-        });
-    })
+  // add event and return it's id
+  app.post("/event", (req, res) => {
+    const event = req.body;
+    debugger
+    eventService.add(event).then(result => {
+      res.json({ eventId: result.insertedId });
+    });
+  });
+  // get one event
+  app.get("/event/:eventId", (req, res) => {
+    const eventId = req.params.eventId;
+    eventService.getById(eventId).then(event => {
+      res.json(event);
+    });
+  });
 
-    // TODO: add middleware to delete, update and add
-    // delete event
-    app.delete('/event/:eventId', (req, res) => {
-        const eventId = req.params.eventId;
-        eventService.remove(eventId)
-            .then(_ => res.end());
-    })
+  // TODO: add middleware to delete, update and add
+  // delete event
+  app.delete("/event/:eventId", (req, res) => {
+    const eventId = req.params.eventId;
+    eventService.remove(eventId).then(() => res.end());
+  });
 
     // update event
     app.put('/event/:eventId', (req, res) => {

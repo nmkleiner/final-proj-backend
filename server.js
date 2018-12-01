@@ -56,6 +56,7 @@ io.on('connection', function (socket) {
             console.log(gRooms);
 
         }
+        console.log('userRoom', userRoom)
         socket.join(userRoom)
         io.to(userRoom).emit('user joined', { txt: 'hello' });
     })

@@ -1,62 +1,65 @@
-'use strict';
+"use strict";
 
-const mongoService = require('./mongo.service');
-const ObjectId = require('mongodb').ObjectId;
+const mongoService = require("./mongo.service");
+const ObjectId = require("mongodb").ObjectId;
 
 module.exports = {
-    query,
-    getById,
-    remove,
-    update,
-    add,
-}
+  query,
+  getById,
+  remove,
+  update,
+  add
+};
 
 function query(filter = {}) {
-    // const byStatus = filter.inStock
-    // const byName = filter.name
-    // const byType = filter.type
-    // const sortParams = filter.sortBy.split('_')
-    // const sortObj = { [sortParams[0]]: +sortParams[1] }
-    const findFilters = []
-    // if (filter) {
-    //     if (filter.byGenre) {
-    //         console.log('hi');
-            
-    //     }
-    // }
-    // if (byStatus !== 'all') {
-    //     if (byStatus === 'inStock') findFilters.push({ inStock: true })
-    //     else findFilters.push({ inStock: false })
-    // }
-    // if (byType !== 'all') {
-    //     findFilters.push({ type: byType })
-    // }
-    
-    console.log('eventservice')
-    return mongoService.connectToDB()
-        .then(dbConn => {
-            const eventCollection = dbConn.collection('events');
-            return eventCollection.find({}).toArray()
-            // return eventCollection.find({ $and: findFilters }).sort(sortObj).toArray()
-        })
+  // const byStatus = filter.inStock
+  // const byName = filter.name
+  // const byType = filter.type
+  // const sortParams = filter.sortBy.split('_')
+  // const sortObj = { [sortParams[0]]: +sortParams[1] }
+  const findFilters = [];
+  // if (filter) {
+  //     if (filter.byGenre) {
+  //         console.log('hi');
+
+  //     }
+  // }
+  // if (byStatus !== 'all') {
+  //     if (byStatus === 'inStock') findFilters.push({ inStock: true })
+  //     else findFilters.push({ inStock: false })
+  // }
+  // if (byType !== 'all') {
+  //     findFilters.push({ type: byType })
+  // }
+
+  return mongoService.connectToDB().then(dbConn => {
+    const eventCollection = dbConn.collection("events");
+    return eventCollection.find({}).toArray();
+    // return eventCollection.find({ $and: findFilters }).sort(sortObj).toArray()
+  });
+}
+
+function add(event) {
+  return mongoService.connectToDB().then(dbConn => {
+    const eventCollection = dbConn.collection("events");
+    return eventCollection.insertOne(event)
+  });
 }
 
 function getById(eventId) {
-    eventId = new ObjectId(eventId)
-    return mongoService.connectToDB()
-        .then(dbConn => {
-            const eventCollection = dbConn.collection('events');
-            return eventCollection.findOne({ _id: eventId })
-        })
+  eventId = new ObjectId(eventId);
+  return mongoService.connectToDB().then(dbConn => {
+    const eventCollection = dbConn.collection("events");
+    return eventCollection.findOne({ _id: eventId });
+  });
 }
 
 function remove(eventId) {
-    eventId = new ObjectId(eventId)
-    return mongoService.connectToDB()
-        .then(dbConn => {
-            const eventCollection = dbConn.collection('events');
-            return eventCollection.remove({ _id: eventId })
-        })
+  eventId = new ObjectId(eventId);
+  return mongoService.connectToDB().then(dbConn => {
+    const eventCollection = dbConn.collection("events");
+    return eventCollection.remove({ _id: eventId });
+  });
 }
 
 // function update(event) {
@@ -70,19 +73,10 @@ function remove(eventId) {
 // }
 
 function update(event) {
-    const eventId = new ObjectId(event._id)
-    delete event._id;
-    return mongoService.connectToDB()
-        .then(dbConn => {
-            const eventCollection = dbConn.collection('events');
-            eventCollection.findOneAndUpdate({ _id: eventId }, { $set: event })
-        })
-}
-
-function add(event) {
-    return mongoService.connectToDB()
-        .then(dbConn => {
-            const eventCollection = dbConn.collection('events');
-            return eventCollection.insertOne(event)
-        })
+  const eventId = new ObjectId(event._id);
+  delete event._id;
+  return mongoService.connectToDB().then(dbConn => {
+    const eventCollection = dbConn.collection("events");
+    eventCollection.findOneAndUpdate({ _id: eventId }, { $set: event });
+  });
 }
