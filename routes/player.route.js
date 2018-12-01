@@ -46,7 +46,6 @@ function addRoutes(app) {
     })
     
     app.put('/player/:playerId', (req, res) => {
-        console.log('server', req.body)
         const player = req.body
         playerService.update(player)
         .then(() => res.end())
