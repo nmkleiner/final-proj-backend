@@ -27,7 +27,6 @@ app.use(express.static("public"));
 eventRoute(app);
 playerRoute(app);
 
-var port = process.env.PORT || 3000;
 
 io.on("connection", socket => {
   socket.on("chatJoined", roomName => socket.join(roomName));
@@ -36,7 +35,6 @@ io.on("connection", socket => {
   });
 });
 
-http.listen(3000, () => {
-  console.log(`App listening on port ${port}!`);
-  // console.log(`App listening on port 3000!`);
+app.listen(process.env.PORT || 3000, () => {
+  
 });

@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "f29ad0031ad2c1c14b771ce504e2bfa7",
-    "url": "/fonts/fa-solid-900.f29ad003.eot"
+    "revision": "48f54f63d7711d0912a9a10205538fc4",
+    "url": "/fonts/fa-solid-900.48f54f63.ttf"
   },
   {
     "revision": "444e27eade4f3960f66f",
@@ -36,20 +36,24 @@ self.__precacheManifest = [
     "url": "/img/instruments/saxophone.png"
   },
   {
+    "revision": "49231c738f41f641d03e1d1cca124862",
+    "url": "/img/instruments/trombone.png"
+  },
+  {
     "revision": "8377a8eeca342d3809c307981304a00e",
     "url": "/img/instruments/piano.png"
   },
   {
-    "revision": "49231c738f41f641d03e1d1cca124862",
-    "url": "/img/instruments/trombone.png"
+    "revision": "b28c4e0233ec8268fc17ef402246e718",
+    "url": "/img/instruments/guitar.png"
   },
   {
     "revision": "d6d123b9355625002ca269facc6d1780",
     "url": "/img/instruments/keyboard.png"
   },
   {
-    "revision": "b28c4e0233ec8268fc17ef402246e718",
-    "url": "/img/instruments/guitar.png"
+    "revision": "8740abd1f43fbbf993306c8ebd3b82cb",
+    "url": "/img/instruments/electric-guitar.png"
   },
   {
     "revision": "731af6d3779b49fcfdfe4f3ac42e0be7",
@@ -58,10 +62,6 @@ self.__precacheManifest = [
   {
     "revision": "7b6ad4b24544e13ef218d592aea13a1b",
     "url": "/img/instruments/accordion.png"
-  },
-  {
-    "revision": "8740abd1f43fbbf993306c8ebd3b82cb",
-    "url": "/img/instruments/electric-guitar.png"
   },
   {
     "revision": "1a2deb259e81e6da6e569ddf1b1069ae",
@@ -88,16 +88,16 @@ self.__precacheManifest = [
     "url": "/fonts/element-icons.6f0a7632.ttf"
   },
   {
-    "revision": "b69de69a4ff8ca0abe96ec0b0c180c5b",
-    "url": "/fonts/fa-brands-400.b69de69a.ttf"
+    "revision": "ec0716ae8aa1ba781a1a6bcbce833f6c",
+    "url": "/fonts/fa-brands-400.ec0716ae.eot"
   },
   {
     "revision": "729f43958e5bd33c27040ce2ed85a9e6",
     "url": "/img/events/3.jpg"
   },
   {
-    "revision": "ec0716ae8aa1ba781a1a6bcbce833f6c",
-    "url": "/fonts/fa-brands-400.ec0716ae.eot"
+    "revision": "b69de69a4ff8ca0abe96ec0b0c180c5b",
+    "url": "/fonts/fa-brands-400.b69de69a.ttf"
   },
   {
     "revision": "bcb927a742a8370b76642fd1a9a749c0",
@@ -112,16 +112,16 @@ self.__precacheManifest = [
     "url": "/fonts/fa-brands-400.8b7a9afd.woff"
   },
   {
-    "revision": "48f54f63d7711d0912a9a10205538fc4",
-    "url": "/fonts/fa-solid-900.48f54f63.ttf"
-  },
-  {
-    "revision": "b48c48ea8457846a5695b139c377d3d1",
-    "url": "/fonts/fa-regular-400.b48c48ea.ttf"
+    "revision": "f29ad0031ad2c1c14b771ce504e2bfa7",
+    "url": "/fonts/fa-solid-900.f29ad003.eot"
   },
   {
     "revision": "6493321d567eb0f22bd5112fbcf044a8",
     "url": "/fonts/fa-regular-400.6493321d.eot"
+  },
+  {
+    "revision": "b48c48ea8457846a5695b139c377d3d1",
+    "url": "/fonts/fa-regular-400.b48c48ea.ttf"
   },
   {
     "revision": "0b5e3a5451fc62d9023ccafc85bc89db",
@@ -132,12 +132,12 @@ self.__precacheManifest = [
     "url": "/fonts/fa-regular-400.bdadb6ce.woff2"
   },
   {
-    "revision": "df6d075fcccd554c9ce354d9b5635f71",
-    "url": "/img/events/2.jpg"
-  },
-  {
     "revision": "70671bfe792837da3d4a3e9362b3654d",
     "url": "/img/events/1.jpg"
+  },
+  {
+    "revision": "df6d075fcccd554c9ce354d9b5635f71",
+    "url": "/img/events/2.jpg"
   },
   {
     "revision": "fd73baa6f975bc1d2e50",
