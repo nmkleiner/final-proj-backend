@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "48f54f63d7711d0912a9a10205538fc4",
-    "url": "/fonts/fa-solid-900.48f54f63.ttf"
+    "revision": "f29ad0031ad2c1c14b771ce504e2bfa7",
+    "url": "/fonts/fa-solid-900.f29ad003.eot"
   },
   {
     "revision": "444e27eade4f3960f66f",
     "url": "/js/about.8b907bfe.js"
   },
   {
-    "revision": "7822377dc3a0b4c039fb",
-    "url": "/js/app.95bccaa4.js"
+    "revision": "3f3956b66f314c0efdfa",
+    "url": "/js/app.48788914.js"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
@@ -28,10 +28,6 @@ self.__precacheManifest = [
     "url": "/img/events/music.png"
   },
   {
-    "revision": "c0a0575fd1990c3a912e80a87ee70629",
-    "url": "/img/instruments/trumpet.png"
-  },
-  {
     "revision": "bd97f6e977dbdce6ed1a6334e9cbf282",
     "url": "/img/instruments/saxophone.png"
   },
@@ -40,12 +36,12 @@ self.__precacheManifest = [
     "url": "/img/instruments/trombone.png"
   },
   {
-    "revision": "8377a8eeca342d3809c307981304a00e",
-    "url": "/img/instruments/piano.png"
+    "revision": "c0a0575fd1990c3a912e80a87ee70629",
+    "url": "/img/instruments/trumpet.png"
   },
   {
-    "revision": "d6d123b9355625002ca269facc6d1780",
-    "url": "/img/instruments/keyboard.png"
+    "revision": "8377a8eeca342d3809c307981304a00e",
+    "url": "/img/instruments/piano.png"
   },
   {
     "revision": "b28c4e0233ec8268fc17ef402246e718",
@@ -56,15 +52,19 @@ self.__precacheManifest = [
     "url": "/img/instruments/electric-guitar.png"
   },
   {
-    "revision": "7b6ad4b24544e13ef218d592aea13a1b",
-    "url": "/img/instruments/accordion.png"
+    "revision": "d6d123b9355625002ca269facc6d1780",
+    "url": "/img/instruments/keyboard.png"
   },
   {
     "revision": "731af6d3779b49fcfdfe4f3ac42e0be7",
     "url": "/img/instruments/drum.png"
   },
   {
-    "revision": "3c1c779b2656336ca33fdd17f672fab6",
+    "revision": "7b6ad4b24544e13ef218d592aea13a1b",
+    "url": "/img/instruments/accordion.png"
+  },
+  {
+    "revision": "3c3fb9595f624239a67a85f4c1f49a14",
     "url": "/index.html"
   },
   {
@@ -112,16 +112,16 @@ self.__precacheManifest = [
     "url": "/fonts/fa-brands-400.8b7a9afd.woff"
   },
   {
-    "revision": "f29ad0031ad2c1c14b771ce504e2bfa7",
-    "url": "/fonts/fa-solid-900.f29ad003.eot"
-  },
-  {
-    "revision": "6493321d567eb0f22bd5112fbcf044a8",
-    "url": "/fonts/fa-regular-400.6493321d.eot"
+    "revision": "48f54f63d7711d0912a9a10205538fc4",
+    "url": "/fonts/fa-solid-900.48f54f63.ttf"
   },
   {
     "revision": "b48c48ea8457846a5695b139c377d3d1",
     "url": "/fonts/fa-regular-400.b48c48ea.ttf"
+  },
+  {
+    "revision": "6493321d567eb0f22bd5112fbcf044a8",
+    "url": "/fonts/fa-regular-400.6493321d.eot"
   },
   {
     "revision": "0b5e3a5451fc62d9023ccafc85bc89db",
@@ -144,7 +144,7 @@ self.__precacheManifest = [
     "url": "/css/chunk-vendors.8da92f75.css"
   },
   {
-    "revision": "7822377dc3a0b4c039fb",
+    "revision": "3f3956b66f314c0efdfa",
     "url": "/css/app.458b2356.css"
   }
 ];
