@@ -22,22 +22,25 @@ function addRoutes(app) {
     app.post('/player', (req, res) => {
         const player = req.body;
         playerService.add(player)
-            .then(() => res.end())
+            .then(addedUser => res.json(addedUser))
     })
-
 
     app.put('/login', (req, res) => {
         const { userName, password } = req.body
         playerService.login(userName, password)
             .then(user => {
                 if (user.name) {
-                    res.json(user)
                     req.session.loggedInUser = user
-                    console.log(req.session.loggedInUser, 'reqsession')
+                    return res.json(user)
                 }
                 else res.end()
             })
     })
+
+    app.post('/logout', (req, res) => {
+        req.session.destroy();
+        res.end();
+    });
 
     app.post('/signup', (req, res) => {
         const user = req.body

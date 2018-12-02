@@ -14,10 +14,10 @@ const playerRoute = require('./routes/player.route')
 
 
 
-// app.use(cors({
-//     origin: ['http://localhost:8080'],
-//     credentials: true
-// }))
+app.use(cors({
+    origin: ['http://localhost:8080'],
+    credentials: true
+}))
 
 app.use(bodyParser.json());
 app.use(cookieParser());
@@ -59,7 +59,7 @@ io.on('connection', function (socket) {
         socket.join(userRoom)
         io.to(userRoom).emit('user joined', { txt: 'hello' });
     })
-    
+
 
     socket.on('user typing', function (user) {
         io.to(userRoom.id).emit('user typing', user);
@@ -70,7 +70,7 @@ io.on('connection', function (socket) {
 
         console.log('message: ', msg);
         socket.to(userRoom).emit('chat newMsg', msg);
-       
+
     });
 
 });
