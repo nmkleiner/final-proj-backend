@@ -40,10 +40,17 @@ function addRoutes(app) {
     eventService.remove(eventId).then(() => res.end());
   });
 
-  // update event
-  app.put("/event/:eventId", (req, res) => {
-    const event = req.body;
-    eventService.update(event).then(event => res.json(event));
-  });
-
+    // update event
+    app.put('/event/:eventId', (req, res) => {
+        const event = req.body;
+        eventService.update(event)
+        .then(event => res.json(event));
+    })
+    
+    // add event
+    app.post('/event', (req, res) => {
+        const event = req.body;
+        eventService.add(event)
+            .then(event => res.json(event));
+    })
 }
