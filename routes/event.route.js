@@ -12,13 +12,13 @@ module.exports = addRoutes;
 
 function addRoutes(app) {
   // get all events
-  app.get("/event", (req, res) => {
+  app.get("/api/event", (req, res) => {
     // const filter = req.query;
     eventService.query().then(events => res.json(events));
   });
 
   // add event and return it's id
-  app.post("/event", (req, res) => {
+  app.post("/api/event", (req, res) => {
     const event = req.body;
     debugger
     eventService.add(event).then(result => {
@@ -26,7 +26,7 @@ function addRoutes(app) {
     });
   });
   // get one event
-  app.get("/event/:eventId", (req, res) => {
+  app.get("/api/event/:eventId", (req, res) => {
     const eventId = req.params.eventId;
     eventService.getById(eventId).then(event => {
       res.json(event);
@@ -35,20 +35,20 @@ function addRoutes(app) {
 
   // TODO: add middleware to delete, update and add
   // delete event
-  app.delete("/event/:eventId", (req, res) => {
+  app.delete("/api/event/:eventId", (req, res) => {
     const eventId = req.params.eventId;
     eventService.remove(eventId).then(() => res.end());
   });
 
     // update event
-    app.put('/event/:eventId', (req, res) => {
+    app.put('/api/event/:eventId', (req, res) => {
         const event = req.body;
         eventService.update(event)
         .then(event => res.json(event));
     })
     
     // add event
-    app.post('/event', (req, res) => {
+    app.post('/api/event', (req, res) => {
         const event = req.body;
         eventService.add(event)
             .then(event => res.json(event));

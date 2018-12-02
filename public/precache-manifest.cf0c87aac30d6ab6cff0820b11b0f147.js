@@ -8,8 +8,8 @@ self.__precacheManifest = [
     "url": "/js/about.8b907bfe.js"
   },
   {
-    "revision": "2d1775d66959bf366c0d",
-    "url": "/js/app.521e7902.js"
+    "revision": "d8cdde576b651bdfe41a",
+    "url": "/js/app.00e88880.js"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
@@ -32,16 +32,16 @@ self.__precacheManifest = [
     "url": "/img/instruments/trumpet.png"
   },
   {
-    "revision": "49231c738f41f641d03e1d1cca124862",
-    "url": "/img/instruments/trombone.png"
-  },
-  {
     "revision": "bd97f6e977dbdce6ed1a6334e9cbf282",
     "url": "/img/instruments/saxophone.png"
   },
   {
     "revision": "8377a8eeca342d3809c307981304a00e",
     "url": "/img/instruments/piano.png"
+  },
+  {
+    "revision": "49231c738f41f641d03e1d1cca124862",
+    "url": "/img/instruments/trombone.png"
   },
   {
     "revision": "d6d123b9355625002ca269facc6d1780",
@@ -52,10 +52,6 @@ self.__precacheManifest = [
     "url": "/img/instruments/guitar.png"
   },
   {
-    "revision": "8740abd1f43fbbf993306c8ebd3b82cb",
-    "url": "/img/instruments/electric-guitar.png"
-  },
-  {
     "revision": "731af6d3779b49fcfdfe4f3ac42e0be7",
     "url": "/img/instruments/drum.png"
   },
@@ -64,7 +60,11 @@ self.__precacheManifest = [
     "url": "/img/instruments/accordion.png"
   },
   {
-    "revision": "d60db7acfde46a233b0fab7f78d87d6f",
+    "revision": "8740abd1f43fbbf993306c8ebd3b82cb",
+    "url": "/img/instruments/electric-guitar.png"
+  },
+  {
+    "revision": "1a2deb259e81e6da6e569ddf1b1069ae",
     "url": "/index.html"
   },
   {
@@ -104,12 +104,12 @@ self.__precacheManifest = [
     "url": "/fonts/fa-solid-900.bcb927a7.woff"
   },
   {
-    "revision": "8b7a9afd7b95f62e6ee8a72930bfb9ed",
-    "url": "/fonts/fa-brands-400.8b7a9afd.woff"
-  },
-  {
     "revision": "fb493903265cad425ccdf8e04fc2de61",
     "url": "/fonts/fa-solid-900.fb493903.woff2"
+  },
+  {
+    "revision": "8b7a9afd7b95f62e6ee8a72930bfb9ed",
+    "url": "/fonts/fa-brands-400.8b7a9afd.woff"
   },
   {
     "revision": "48f54f63d7711d0912a9a10205538fc4",
@@ -144,7 +144,7 @@ self.__precacheManifest = [
     "url": "/css/chunk-vendors.8da92f75.css"
   },
   {
-    "revision": "2d1775d66959bf366c0d",
+    "revision": "d8cdde576b651bdfe41a",
     "url": "/css/app.458b2356.css"
   }
 ];
