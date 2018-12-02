@@ -11,10 +11,11 @@ module.exports = addRoutes;
 // }
 
 function addRoutes(app) {
-  // get all events
   app.get("/event", (req, res) => {
-    // const filter = req.query;
-    eventService.query().then(events => res.json(events));
+    const filter = req.query;
+    console.log('filterrrrrr',filter)
+    eventService.query(filter)
+      .then(events => res.json(events));
   });
 
   // add event and return it's id
