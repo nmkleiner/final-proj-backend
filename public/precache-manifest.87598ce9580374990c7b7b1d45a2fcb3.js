@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "48f54f63d7711d0912a9a10205538fc4",
-    "url": "/fonts/fa-solid-900.48f54f63.ttf"
+    "revision": "f29ad0031ad2c1c14b771ce504e2bfa7",
+    "url": "/fonts/fa-solid-900.f29ad003.eot"
   },
   {
     "revision": "444e27eade4f3960f66f",
     "url": "/js/about.8b907bfe.js"
   },
   {
-    "revision": "d8cdde576b651bdfe41a",
-    "url": "/js/app.00e88880.js"
+    "revision": "caac89ae85883d0f3627",
+    "url": "/js/app.7d1c8a6b.js"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
@@ -32,24 +32,24 @@ self.__precacheManifest = [
     "url": "/img/instruments/trumpet.png"
   },
   {
-    "revision": "bd97f6e977dbdce6ed1a6334e9cbf282",
-    "url": "/img/instruments/saxophone.png"
-  },
-  {
     "revision": "49231c738f41f641d03e1d1cca124862",
     "url": "/img/instruments/trombone.png"
   },
   {
-    "revision": "8377a8eeca342d3809c307981304a00e",
-    "url": "/img/instruments/piano.png"
+    "revision": "d6d123b9355625002ca269facc6d1780",
+    "url": "/img/instruments/keyboard.png"
+  },
+  {
+    "revision": "bd97f6e977dbdce6ed1a6334e9cbf282",
+    "url": "/img/instruments/saxophone.png"
   },
   {
     "revision": "b28c4e0233ec8268fc17ef402246e718",
     "url": "/img/instruments/guitar.png"
   },
   {
-    "revision": "d6d123b9355625002ca269facc6d1780",
-    "url": "/img/instruments/keyboard.png"
+    "revision": "8377a8eeca342d3809c307981304a00e",
+    "url": "/img/instruments/piano.png"
   },
   {
     "revision": "8740abd1f43fbbf993306c8ebd3b82cb",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/img/instruments/accordion.png"
   },
   {
-    "revision": "1a2deb259e81e6da6e569ddf1b1069ae",
+    "revision": "e67a4e34fa06432b7efeed5138bee5a7",
     "url": "/index.html"
   },
   {
@@ -112,8 +112,8 @@ self.__precacheManifest = [
     "url": "/fonts/fa-brands-400.8b7a9afd.woff"
   },
   {
-    "revision": "f29ad0031ad2c1c14b771ce504e2bfa7",
-    "url": "/fonts/fa-solid-900.f29ad003.eot"
+    "revision": "48f54f63d7711d0912a9a10205538fc4",
+    "url": "/fonts/fa-solid-900.48f54f63.ttf"
   },
   {
     "revision": "6493321d567eb0f22bd5112fbcf044a8",
@@ -144,7 +144,7 @@ self.__precacheManifest = [
     "url": "/css/chunk-vendors.8da92f75.css"
   },
   {
-    "revision": "d8cdde576b651bdfe41a",
-    "url": "/css/app.458b2356.css"
+    "revision": "caac89ae85883d0f3627",
+    "url": "/css/app.2af60d21.css"
   }
 ];
