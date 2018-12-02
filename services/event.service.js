@@ -13,7 +13,7 @@ module.exports = {
 
 function query(filter = {}) {
   if (!filter.genre && !filter.instrument && !filter.name && !filter.status) {
-    console.log('!filter',filter)
+    // console.log('!filter',filter)
     return mongoService.connectToDB()
       .then(dbConn => {
         const eventCollection = dbConn.collection('events');
@@ -35,7 +35,7 @@ function query(filter = {}) {
 
     var sortObject = {}
     if (filter.sortBy) sortObject = { [filter.sortBy]: parseInt(filter.order) }
-    console.log(sortObject, genreObject, instrumentObject, nameObject, statusObject)
+    // console.log(sortObject, genreObject, instrumentObject, nameObject, statusObject)
     return mongoService.connectToDB()
       .then(dbConn => {
         const eventCollection = dbConn.collection('events')
