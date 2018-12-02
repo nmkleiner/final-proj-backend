@@ -1,5 +1,3 @@
-"use strict";
-
 const mongoService = require("./mongo.service");
 const ObjectId = require("mongodb").ObjectId;
 
