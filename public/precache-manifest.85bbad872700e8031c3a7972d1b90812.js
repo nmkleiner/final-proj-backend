@@ -8,8 +8,8 @@ self.__precacheManifest = [
     "url": "/js/about.8b907bfe.js"
   },
   {
-    "revision": "3f3956b66f314c0efdfa",
-    "url": "/js/app.48788914.js"
+    "revision": "2d1775d66959bf366c0d",
+    "url": "/js/app.521e7902.js"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
@@ -28,12 +28,12 @@ self.__precacheManifest = [
     "url": "/img/events/music.png"
   },
   {
-    "revision": "bd97f6e977dbdce6ed1a6334e9cbf282",
-    "url": "/img/instruments/saxophone.png"
-  },
-  {
     "revision": "49231c738f41f641d03e1d1cca124862",
     "url": "/img/instruments/trombone.png"
+  },
+  {
+    "revision": "bd97f6e977dbdce6ed1a6334e9cbf282",
+    "url": "/img/instruments/saxophone.png"
   },
   {
     "revision": "c0a0575fd1990c3a912e80a87ee70629",
@@ -44,14 +44,6 @@ self.__precacheManifest = [
     "url": "/img/instruments/piano.png"
   },
   {
-    "revision": "b28c4e0233ec8268fc17ef402246e718",
-    "url": "/img/instruments/guitar.png"
-  },
-  {
-    "revision": "8740abd1f43fbbf993306c8ebd3b82cb",
-    "url": "/img/instruments/electric-guitar.png"
-  },
-  {
     "revision": "d6d123b9355625002ca269facc6d1780",
     "url": "/img/instruments/keyboard.png"
   },
@@ -60,11 +52,19 @@ self.__precacheManifest = [
     "url": "/img/instruments/drum.png"
   },
   {
+    "revision": "b28c4e0233ec8268fc17ef402246e718",
+    "url": "/img/instruments/guitar.png"
+  },
+  {
     "revision": "7b6ad4b24544e13ef218d592aea13a1b",
     "url": "/img/instruments/accordion.png"
   },
   {
-    "revision": "3c3fb9595f624239a67a85f4c1f49a14",
+    "revision": "8740abd1f43fbbf993306c8ebd3b82cb",
+    "url": "/img/instruments/electric-guitar.png"
+  },
+  {
+    "revision": "2b62adaaeebe2e6fd2712d70ddd6d4ff",
     "url": "/index.html"
   },
   {
@@ -88,16 +88,16 @@ self.__precacheManifest = [
     "url": "/fonts/element-icons.6f0a7632.ttf"
   },
   {
-    "revision": "b69de69a4ff8ca0abe96ec0b0c180c5b",
-    "url": "/fonts/fa-brands-400.b69de69a.ttf"
+    "revision": "ec0716ae8aa1ba781a1a6bcbce833f6c",
+    "url": "/fonts/fa-brands-400.ec0716ae.eot"
   },
   {
     "revision": "729f43958e5bd33c27040ce2ed85a9e6",
     "url": "/img/events/3.jpg"
   },
   {
-    "revision": "ec0716ae8aa1ba781a1a6bcbce833f6c",
-    "url": "/fonts/fa-brands-400.ec0716ae.eot"
+    "revision": "b69de69a4ff8ca0abe96ec0b0c180c5b",
+    "url": "/fonts/fa-brands-400.b69de69a.ttf"
   },
   {
     "revision": "bcb927a742a8370b76642fd1a9a749c0",
@@ -144,7 +144,7 @@ self.__precacheManifest = [
     "url": "/css/chunk-vendors.8da92f75.css"
   },
   {
-    "revision": "3f3956b66f314c0efdfa",
+    "revision": "2d1775d66959bf366c0d",
     "url": "/css/app.458b2356.css"
   }
 ];
