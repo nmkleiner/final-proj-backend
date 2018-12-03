@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "f29ad0031ad2c1c14b771ce504e2bfa7",
-    "url": "/fonts/fa-solid-900.f29ad003.eot"
+    "revision": "48f54f63d7711d0912a9a10205538fc4",
+    "url": "/fonts/fa-solid-900.48f54f63.ttf"
   },
   {
     "revision": "444e27eade4f3960f66f",
     "url": "/js/about.8b907bfe.js"
   },
   {
-    "revision": "d14b128737412a9d51aa",
-    "url": "/js/app.fd1024fa.js"
+    "revision": "75005e5595d3395f6a74",
+    "url": "/js/app.2ef7c133.js"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
@@ -28,12 +28,16 @@ self.__precacheManifest = [
     "url": "/img/events/music.png"
   },
   {
+    "revision": "c0a0575fd1990c3a912e80a87ee70629",
+    "url": "/img/instruments/trumpet.png"
+  },
+  {
     "revision": "49231c738f41f641d03e1d1cca124862",
     "url": "/img/instruments/trombone.png"
   },
   {
-    "revision": "c0a0575fd1990c3a912e80a87ee70629",
-    "url": "/img/instruments/trumpet.png"
+    "revision": "d6d123b9355625002ca269facc6d1780",
+    "url": "/img/instruments/keyboard.png"
   },
   {
     "revision": "bd97f6e977dbdce6ed1a6334e9cbf282",
@@ -42,10 +46,6 @@ self.__precacheManifest = [
   {
     "revision": "8377a8eeca342d3809c307981304a00e",
     "url": "/img/instruments/piano.png"
-  },
-  {
-    "revision": "d6d123b9355625002ca269facc6d1780",
-    "url": "/img/instruments/keyboard.png"
   },
   {
     "revision": "b28c4e0233ec8268fc17ef402246e718",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/img/instruments/accordion.png"
   },
   {
-    "revision": "0719ec6e39680e0e56311648153bcdea",
+    "revision": "07758c0848bfb8a1daa8cf05cf1f71db",
     "url": "/index.html"
   },
   {
@@ -112,16 +112,16 @@ self.__precacheManifest = [
     "url": "/fonts/fa-brands-400.8b7a9afd.woff"
   },
   {
-    "revision": "48f54f63d7711d0912a9a10205538fc4",
-    "url": "/fonts/fa-solid-900.48f54f63.ttf"
-  },
-  {
-    "revision": "6493321d567eb0f22bd5112fbcf044a8",
-    "url": "/fonts/fa-regular-400.6493321d.eot"
+    "revision": "f29ad0031ad2c1c14b771ce504e2bfa7",
+    "url": "/fonts/fa-solid-900.f29ad003.eot"
   },
   {
     "revision": "b48c48ea8457846a5695b139c377d3d1",
     "url": "/fonts/fa-regular-400.b48c48ea.ttf"
+  },
+  {
+    "revision": "6493321d567eb0f22bd5112fbcf044a8",
+    "url": "/fonts/fa-regular-400.6493321d.eot"
   },
   {
     "revision": "0b5e3a5451fc62d9023ccafc85bc89db",
@@ -144,7 +144,7 @@ self.__precacheManifest = [
     "url": "/css/chunk-vendors.8da92f75.css"
   },
   {
-    "revision": "d14b128737412a9d51aa",
-    "url": "/css/app.4646558c.css"
+    "revision": "75005e5595d3395f6a74",
+    "url": "/css/app.bee0d734.css"
   }
 ];
