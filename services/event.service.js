@@ -10,31 +10,38 @@ module.exports = {
 };
 
 function query(filter = {}) {
-  // const byStatus = filter.inStock
-  // const byName = filter.name
-  // const byType = filter.type
-  // const sortParams = filter.sortBy.split('_')
-  // const sortObj = { [sortParams[0]]: +sortParams[1] }
-  const findFilters = [];
-  // if (filter) {
-  //     if (filter.byGenre) {
-  //         console.log('hi');
+  if (!filter.genre && !filter.instrument && !filter.name && !filter.status) {
+    // console.log('!filter',filter)
+    return mongoService.connectToDB()
+      .then(dbConn => {
+        const eventCollection = dbConn.collection('events');
+        return eventCollection.find({}).toArray()
+      })
+  } else {
+    const nameObject = { title: { $regex: `.*${filter.name}.*` } }
 
-  //     }
-  // }
-  // if (byStatus !== 'all') {
-  //     if (byStatus === 'inStock') findFilters.push({ inStock: true })
-  //     else findFilters.push({ inStock: false })
-  // }
-  // if (byType !== 'all') {
-  //     findFilters.push({ type: byType })
-  // }
+    var instrumentObject = {}
+    if (filter.instrument.trim() && filter.instrument.trim() !== 'All instruments') {
+      instrumentObject = { 'instruments.instrument': filter.instrument.trim() }
+    }
 
-  return mongoService.connectToDB().then(dbConn => {
-    const eventCollection = dbConn.collection("events");
-    return eventCollection.find({}).toArray();
-    // return eventCollection.find({ $and: findFilters }).sort(sortObj).toArray()
-  });
+    var genreObject = {}
+    if (filter.genre && filter.genre !== 'All genres') genreObject = { genre: filter.genre }
+
+    var statusObject = {}
+    if (filter.status && filter.status !== 'All statuses') statusObject = { status: filter.status }
+
+    var sortObject = {}
+    if (filter.sortBy) sortObject = { [filter.sortBy]: parseInt(filter.order) }
+    // console.log(sortObject, genreObject, instrumentObject, nameObject, statusObject)
+    return mongoService.connectToDB()
+      .then(dbConn => {
+        const eventCollection = dbConn.collection('events')
+        return eventCollection.find({ $and: [nameObject,genreObject,instrumentObject,statusObject] })
+          .sort(sortObject)
+          .toArray()
+      })
+  }
 }
 
 function add(event) {
