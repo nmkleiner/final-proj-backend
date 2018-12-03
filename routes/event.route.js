@@ -11,7 +11,7 @@ module.exports = addRoutes;
 // }
 
 function addRoutes(app) {
-  app.get("/event", (req, res) => {
+  app.get("/api/event", (req, res) => {
     const filter = req.query;
     eventService.query(filter)
       .then(events => res.json(events));
