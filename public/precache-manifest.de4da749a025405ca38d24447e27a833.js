@@ -8,8 +8,8 @@ self.__precacheManifest = [
     "url": "/js/about.8b907bfe.js"
   },
   {
-    "revision": "5f5fb0384976a51003a6",
-    "url": "/js/app.042e00db.js"
+    "revision": "75005e5595d3395f6a74",
+    "url": "/js/app.2ef7c133.js"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
@@ -28,28 +28,28 @@ self.__precacheManifest = [
     "url": "/img/events/music.png"
   },
   {
+    "revision": "c0a0575fd1990c3a912e80a87ee70629",
+    "url": "/img/instruments/trumpet.png"
+  },
+  {
     "revision": "49231c738f41f641d03e1d1cca124862",
     "url": "/img/instruments/trombone.png"
   },
   {
-    "revision": "c0a0575fd1990c3a912e80a87ee70629",
-    "url": "/img/instruments/trumpet.png"
+    "revision": "d6d123b9355625002ca269facc6d1780",
+    "url": "/img/instruments/keyboard.png"
   },
   {
     "revision": "bd97f6e977dbdce6ed1a6334e9cbf282",
     "url": "/img/instruments/saxophone.png"
   },
   {
-    "revision": "b28c4e0233ec8268fc17ef402246e718",
-    "url": "/img/instruments/guitar.png"
-  },
-  {
     "revision": "8377a8eeca342d3809c307981304a00e",
     "url": "/img/instruments/piano.png"
   },
   {
-    "revision": "d6d123b9355625002ca269facc6d1780",
-    "url": "/img/instruments/keyboard.png"
+    "revision": "b28c4e0233ec8268fc17ef402246e718",
+    "url": "/img/instruments/guitar.png"
   },
   {
     "revision": "8740abd1f43fbbf993306c8ebd3b82cb",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/img/instruments/accordion.png"
   },
   {
-    "revision": "4d87ab2e0dbb990128959afb48c50fec",
+    "revision": "07758c0848bfb8a1daa8cf05cf1f71db",
     "url": "/index.html"
   },
   {
@@ -132,19 +132,19 @@ self.__precacheManifest = [
     "url": "/fonts/fa-regular-400.bdadb6ce.woff2"
   },
   {
-    "revision": "70671bfe792837da3d4a3e9362b3654d",
-    "url": "/img/events/1.jpg"
-  },
-  {
     "revision": "df6d075fcccd554c9ce354d9b5635f71",
     "url": "/img/events/2.jpg"
+  },
+  {
+    "revision": "70671bfe792837da3d4a3e9362b3654d",
+    "url": "/img/events/1.jpg"
   },
   {
     "revision": "9109382a6fe71c3fb06d",
     "url": "/css/chunk-vendors.8da92f75.css"
   },
   {
-    "revision": "5f5fb0384976a51003a6",
-    "url": "/css/app.20a5003c.css"
+    "revision": "75005e5595d3395f6a74",
+    "url": "/css/app.bee0d734.css"
   }
 ];
