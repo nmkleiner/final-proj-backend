@@ -13,6 +13,7 @@ module.exports = addRoutes;
 function addRoutes(app) {
   app.get("/api/event", (req, res) => {
     const filter = req.query;
+    console.log(filter)
     eventService.query(filter)
       .then(events => res.json(events));
   });

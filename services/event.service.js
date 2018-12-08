@@ -21,7 +21,7 @@ function query(filter = {}) {
 
     var instrumentObject = {}
     if (filter.instrument.trim() && filter.instrument.trim() !== 'All instruments') {
-      instrumentObject = { 'instruments.instrument': filter.instrument.trim() }
+      instrumentObject = { 'instruments.name': filter.instrument.trim() }
     }
 
     var genreObject = {}
