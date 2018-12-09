@@ -11,11 +11,11 @@ module.exports = {
 
 function query(filter = {}) {
   if (!filter.genre && !filter.instrument && !filter.name && !filter.status) {
-    return mongoService.connectToDB()
-      .then(dbConn => {
-        const eventCollection = dbConn.collection('events');
-        return eventCollection.find({}).toArray()
-      })
+      return mongoService.connectToDB()
+        .then(dbConn => {
+          const eventCollection = dbConn.collection('events');
+          return eventCollection.find({}).toArray()
+        })
   } else {
     const nameObject = { title: { $regex: `.*${filter.name}.*` } }
 
@@ -35,7 +35,7 @@ function query(filter = {}) {
     return mongoService.connectToDB()
       .then(dbConn => {
         const eventCollection = dbConn.collection('events')
-        return eventCollection.find({ $and: [nameObject,genreObject,instrumentObject,statusObject] })
+        return eventCollection.find({ $and: [nameObject, genreObject, instrumentObject, statusObject] })
           .sort(sortObject)
           .toArray()
       })
