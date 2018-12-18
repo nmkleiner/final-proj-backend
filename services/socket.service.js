@@ -1,7 +1,6 @@
 // const eventService = require('./event.service');
 
 // io.on('connection', function (socket) {
-//     console.log('a user connected');
 
 //     var userRoom;
 
@@ -15,13 +14,11 @@
 //         // eventService.unshiftMsg(msg, eventId)
 //         // historyMsgs.push(msg);
             
-//         console.log('message: ', msg);
 //         socket.to(userRoom).emit('chat newMsg', msg);
 
 //     });
 
 //     // socket.on('disconnect', function(){
-//     //     console.log('user disconnected');
 //     //   });
 
 // });

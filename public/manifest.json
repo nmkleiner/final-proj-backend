@@ -1,6 +1,6 @@
 {
-  "name": "pwa",
-  "short_name": "pwa",
+  "name": "backgammon",
+  "short_name": "backgammon",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
