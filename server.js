@@ -7,7 +7,7 @@ app.use(cors());
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
-var http = require("http").Server(app);
+const http = require("http").Server(app);
 const io = require("socket.io").listen(http);
 const eventRoute = require("./routes/event.route");
 const playerRoute = require("./routes/player.route");
@@ -27,14 +27,48 @@ app.use(express.static("public"));
 eventRoute(app);
 playerRoute(app);
 
-
 io.on("connection", socket => {
-  socket.on("chatJoined", roomName => socket.join(roomName));
-  socket.on("assignMsg", ({ msg, room }) => {
-    io.sockets.in(room).emit("renderMsg", msg);
+  socket.on("gameJoined", room => {
+    socket.join(room)    
+    socket.broadcast.to(room).emit('userJoined');
   });
+  
+  
+  socket.on('alreadyHere', room => {
+    socket.broadcast.to(room).emit('someoneAlreadyHere')
+  })
+  socket.on("rollDices", room => {
+    socket.broadcast.to(room).emit('dicesRolling');
+    // io.sockets.in(room).emit("movedSoldier",cells);
+  });
+
+  socket.on("dicesRes", (room,dices) => {
+    socket.broadcast.to(room).emit('dicesUnrolling',dices);
+    // io.sockets.in(room).emit("movedSoldier",cells);
+  });
+  socket.on("soldierMoved", (cells,room) => {
+    io.sockets.in(room).emit("movedSoldier",cells);
+  });
+  socket.on("endTurn", room => {
+    socket.broadcast.to(room).emit('turnEnded');
+  });
+  socket.on("endGame", (room,winner) => {
+    socket.broadcast.to(room).emit('gameEnded',winner);
+  });
+  
+  // socket.on("assignMsg", ({ msg, room }) => {
+  //   io.sockets.in(room).emit("renderMsg", msg);
+  // });
 });
 
 http.listen(process.env.PORT || 3000, () => {
   console.log('server running')
 });
+
+
+
+// io.sockets.on('connection', function (socket) {
+//   socket.join('justin bieber fans');
+//   socket.broadcast.to('justin bieber fans').emit('new fan');
+//   io.sockets.in('rammstein fans').emit('new non-fan');
+// });

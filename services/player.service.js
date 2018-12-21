@@ -24,7 +24,6 @@ function query() {
 
 function getById(playerId) {
     playerId = new ObjectId(playerId)
-    console.log('get by id')
     return mongoService.connectToDB()
         .then(dbConn => {
             const playerCollection = dbConn.collection('players');
