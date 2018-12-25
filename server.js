@@ -44,7 +44,9 @@ io.on("connection", socket => {
 
   socket.on("dicesRes", (room,dices) => {
     socket.broadcast.to(room).emit('dicesUnrolling',dices);
-    // io.sockets.in(room).emit("movedSoldier",cells);
+  });
+  socket.on("startDiceRes", (room,dice) => {
+    socket.broadcast.to(room).emit('diceUnrolling',dice);
   });
   socket.on("soldierMoved", (cells,room) => {
     io.sockets.in(room).emit("movedSoldier",cells);
