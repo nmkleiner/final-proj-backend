@@ -57,6 +57,12 @@ io.on("connection", socket => {
   socket.on("endGame", (room,winner) => {
     socket.broadcast.to(room).emit('gameEnded',winner);
   });
+  socket.on("mars", room => {
+    socket.broadcast.to(room).emit('isMars');
+  });
+  socket.on("turkishMars", room => {
+    socket.broadcast.to(room).emit('isTurkishMars');
+  });
   
   // socket.on("assignMsg", ({ msg, room }) => {
   //   io.sockets.in(room).emit("renderMsg", msg);
@@ -67,10 +73,3 @@ http.listen(process.env.PORT || 3000, () => {
   console.log('server running')
 });
 
-
-
-// io.sockets.on('connection', function (socket) {
-//   socket.join('justin bieber fans');
-//   socket.broadcast.to('justin bieber fans').emit('new fan');
-//   io.sockets.in('rammstein fans').emit('new non-fan');
-// });
