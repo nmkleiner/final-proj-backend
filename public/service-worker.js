@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.fbcd6267d42e4e320435f685542977db.js"
+  "/precache-manifest.efc551ad0f66f7069cba92e167d0d72e.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "backgammon"});
