@@ -20,7 +20,6 @@ function addRoutes(app) {
   // add event and return it's id
   app.post("/api/event", (req, res) => {
     const event = req.body;
-    debugger
     eventService.add(event).then(result => {
       res.json({ eventId: result.insertedId });
     });
@@ -29,7 +28,8 @@ function addRoutes(app) {
   app.get("/api/event/:eventId", (req, res) => {
     const eventId = req.params.eventId;
     eventService.getById(eventId).then(event => {
-      res.json(event);
+      // event = event.toArray()
+      res.json(event[0]);
     });
   });
 

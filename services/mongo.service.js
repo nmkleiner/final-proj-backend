@@ -14,8 +14,9 @@ module.exports = {
 function connectToDB() {
     if (dbConn) return Promise.resolve(dbConn);
     
+
     return new Promise((resolve, reject) => {
-        mongoClient.connect(url, (err, client) => {
+        mongoClient.connect(url,{ useNewUrlParser: true }, (err, client) => {
             if (err) return reject('Cannot connect to Mongo')
             dbConn = client.db(dbName);
             return resolve(dbConn);

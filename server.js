@@ -29,7 +29,7 @@ playerRoute(app);
 
 
 io.on("connection", socket => {
-  socket.on("chatJoined", roomName => socket.join(roomName));
+  socket.on("chatJoined", room => socket.join(room));
   socket.on("assignMsg", ({ msg, room }) => {
     io.sockets.in(room).emit("renderMsg", msg);
   });

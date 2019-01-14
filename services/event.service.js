@@ -53,7 +53,22 @@ function getById(eventId) {
   eventId = new ObjectId(eventId);
   return mongoService.connectToDB().then(dbConn => {
     const eventCollection = dbConn.collection("events");
-    return eventCollection.findOne({ _id: eventId });
+    // return eventCollection.findOne({ _id: eventId });
+    return eventCollection.aggregate([
+      {$match: { _id: eventId }},
+      {$lookup: {
+        from: "players",
+        localField: "adminId",
+        foreignField: "_id",
+        as: "admin"
+      }},
+      {$lookup: {
+        from: "players",
+        localField: "instruments.playerIds",
+        foreignField: "_id",
+        as: "players"
+      }}
+    ]).toArray();
   });
 }
 
@@ -68,6 +83,11 @@ function remove(eventId) {
 function update(event) {
   const eventId = new ObjectId(event._id);
   delete event._id;
+  
+  event.instruments.forEach(instrument => {
+    instrument.playerIds = instrument.playerIds.map((playerId) => ObjectId(playerId))
+  })
+  if (typeof event.adminId === 'string') event.adminId = ObjectId(event.adminId)
   return mongoService.connectToDB().then(dbConn => {
     const eventCollection = dbConn.collection("events");
     eventCollection.findOneAndUpdate({ _id: eventId }, { $set: event });
