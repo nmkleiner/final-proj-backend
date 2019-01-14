@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.48ed60793c3beb3d2724f996b95e4a6c.js"
+  "/precache-manifest.9b98de6ab736e0740e8c5c0af2f7029c.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "pwa"});
+workbox.core.setCacheNameDetails({prefix: "backgammon"});
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to

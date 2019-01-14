@@ -7,7 +7,7 @@ app.use(cors());
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
-var http = require("http").Server(app);
+const http = require("http").Server(app);
 const io = require("socket.io").listen(http);
 const eventRoute = require("./routes/event.route");
 const playerRoute = require("./routes/player.route");
@@ -27,14 +27,20 @@ app.use(express.static("public"));
 eventRoute(app);
 playerRoute(app);
 
-
 io.on("connection", socket => {
   socket.on("chatJoined", room => socket.join(room));
+  
   socket.on("assignMsg", ({ msg, room }) => {
     io.sockets.in(room).emit("renderMsg", msg);
   });
+  
+  
+  // socket.on("assignMsg", ({ msg, room }) => {
+  //   io.sockets.in(room).emit("renderMsg", msg);
+  // });
 });
 
 http.listen(process.env.PORT || 3000, () => {
-  
+  console.log('server running')
 });
+

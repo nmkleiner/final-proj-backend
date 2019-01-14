@@ -10,7 +10,6 @@ module.exports = {
     login,
     update,
     signUp,
-    getById,
     remove,
     add
 }
@@ -43,15 +42,6 @@ function login (userName, password) {
             if (password === user.password) return user
             else return {};
     })
-}
-
-function getById(playerId) {
-    playerId = new ObjectId(playerId)
-    return mongoService.connectToDB()
-        .then(dbConn => {
-            const playerCollection = dbConn.collection('players');
-            return playerCollection.findOne({ _id: playerId })
-        })
 }
 
 function update(user) {
